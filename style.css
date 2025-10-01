@@ -1,71 +1,134 @@
-/* Colores de la marca */
+/* ======== VARIABLES DE COLOR Y FUENTES ======== */
 :root {
-    --primary-yellow: #ffda4c;
-    --primary-red: #ce4444;
-    --light-cream: #f5f0e1;
+    --color-amarillo: #ffda4c;
+    --color-rojo: #ce4444;
+    --color-crema: #f5f0e1;
+    --color-texto: #333;
+    --font-titulos: 'Fredoka One', cursive;
+    --font-cuerpo: 'Lato', sans-serif;
 }
 
+/* ======== ESTILOS GENERALES ======== */
 body {
-    font-family: 'Open Sans', sans-serif;
-    color: #333;
-    background-color: var(--light-cream); /* Fondo global de la página */
+    font-family: var(--font-cuerpo);
+    color: var(--color-texto);
+    line-height: 1.6;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--font-titulos);
+    color: var(--color-rojo);
 }
 
-/* Clases de colores personalizadas */
-.bg-custom-yellow { background-color: var(--primary-yellow) !important; }
-.bg-custom-red { background-color: var(--primary-red) !important; }
-.feature-box { background-color: #fff; }
-
-.text-custom-yellow { color: var(--primary-yellow) !important; }
-.text-custom-red { color: var(--primary-red) !important; }
-
-/* Botones */
-.btn-custom-yellow {
-    background-color: var(--primary-yellow);
-    color: var(--primary-red);
-    border: none;
-}
-.btn-custom-red {
-    background-color: var(--primary-red);
-    color: white;
-    border: none;
+.section-title {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
 }
 
-/* Navbar */
-.navbar { padding-top: 1rem; padding-bottom: 1rem; }
-.navbar-brand img { height: 50px; }
+/* ======== COMPONENTES DE BOOTSTRAP PERSONALIZADOS ======== */
+.btn-primary {
+    background-color: var(--color-rojo);
+    border-color: var(--color-rojo);
+    font-family: var(--font-titulos);
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    border-radius: 50px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
 
-/* Hero Section - Sin imagen de fondo, solo color */
-.hero-section {
-    min-height: 90vh;
+.btn-primary:hover {
+    background-color: #a83333; /* Un rojo más oscuro */
+    border-color: #a83333;
+    transform: translateY(-2px);
+}
+
+.navbar {
+    border-bottom: 3px solid var(--color-amarillo);
+}
+
+.nav-link {
+    font-weight: 700;
+    color: var(--color-texto) !important;
+}
+
+.form-control:focus {
+    border-color: var(--color-amarillo);
+    box-shadow: 0 0 0 0.25rem rgba(255, 218, 76, 0.5);
+}
+
+
+/* ======== SECCIONES ESPECÍFICAS ======== */
+
+/* Hero Section */
+.hero {
+    background-color: var(--color-amarillo);
+    padding: 100px 0;
     display: flex;
     align-items: center;
-    padding-top: 70px;
+    justify-content: center;
+    min-height: 80vh;
 }
 
-/* Feature Boxes */
-.feature-box {
-    background-color: #fff;
-    border: 1px solid #e0e0e0;
+.hero-title {
+    font-size: 4.5rem;
+    color: var(--color-rojo);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    max-width: 600px;
+    margin: 20px auto 40px;
+}
+
+/* Beneficios */
+#beneficios .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 15px;
+}
+
+#beneficios .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+}
+
+.icon-feature {
+    font-size: 3.5rem;
+    color: var(--color-amarillo);
+}
+
+
+/* Productos */
+#productos {
+    background-color: var(--color-crema);
+}
+
+.product-card {
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
     transition: transform 0.3s ease;
 }
-.feature-box:hover {
-    transform: translateY(-5px);
+
+.product-card:hover {
+    transform: scale(1.03);
 }
 
-/* Testimonials Images */
-.testimonial-img {
-    width: 120px;
-    height: 120px;
-    object-fit: cover;
-    border-radius: 50%;
-    margin-bottom: 1.5rem;
-    border: 4px solid var(--primary-red);
+.product-card .card-body {
+    background-color: #fff;
+}
+
+.product-card .card-title {
+    font-size: 1.8rem;
+}
+
+/* Contacto */
+#contacto {
+    background-color: #fff;
 }
 
 /* Footer */
-footer { padding-top: 2rem; padding-bottom: 2rem; }
+footer a:hover {
+    color: var(--color-amarillo) !important;
+}
