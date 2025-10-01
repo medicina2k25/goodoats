@@ -7,81 +7,42 @@
 
 body {
     font-family: 'Open Sans', sans-serif;
-    color: #333;
-    padding-top: 70px; /* Evita que el contenido se oculte detrás de la navbar fija */
-    background-color: #f5f0e1; /* <-- AÑADE ESTA LÍNEA */
+    padding-top: 70px; 
+    background-color: #f5f0e1; /* <-- COLOR DE FONDO CORREGIDO */
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Montserrat', sans-serif;
 }
 
-/* Clases de colores personalizadas */
-.bg-custom-yellow {
-    background-color: var(--primary-yellow) !important;
-}
+/* Colores personalizados */
+.bg-custom-red { background-color: var(--primary-red) !important; }
+.text-custom-yellow { color: var(--primary-yellow) !important; }
+.text-custom-red { color: var(--primary-red) !important; }
+.feature-box { background-color: #fff; }
 
-.bg-custom-red {
-    background-color: var(--primary-red) !important;
-}
-
-.bg-light-cream {
-    background-color: var(--light-cream) !important;
-}
-
-.text-custom-yellow {
-    color: var(--primary-yellow) !important;
-}
-
-.text-custom-red {
-    color: var(--primary-red) !important;
-}
-
+/* Botones */
 .btn-custom-yellow {
     background-color: var(--primary-yellow);
     color: var(--primary-red);
     border: none;
-    transition: background-color 0.3s ease;
 }
-
-.btn-custom-yellow:hover {
-    background-color: #fdd03a; /* Un amarillo ligeramente más oscuro al pasar el ratón */
-    color: var(--primary-red);
-}
-
 .btn-custom-red {
     background-color: var(--primary-red);
-    color: var(--light-cream); /* Cambiado a crema para mejor contraste */
+    color: white;
     border: none;
-    transition: background-color 0.3s ease;
-}
-
-.btn-custom-red:hover {
-    background-color: #b03a3a; /* Un rojo ligeramente más oscuro al pasar el ratón */
-    color: var(--light-cream);
 }
 
 /* Navbar */
 .navbar-brand img {
-    height: 50px; /* Ajusta el tamaño del logo en la navbar */
-    width: auto;
-}
-
-.navbar-dark .navbar-nav .nav-link {
-    color: var(--light-cream);
-    font-weight: 600;
-}
-
-.navbar-dark .navbar-nav .nav-link:hover,
-.navbar-dark .navbar-nav .nav-link.active {
-    color: var(--primary-yellow);
+    height: 50px;
 }
 
 /* Hero Section */
 .hero-section {
-    /* IMAGEN DE FONDO ACTUALIZADA AQUÍ */
-    background: url('https://i.imgur.com/1QAMxs2.png') repeat center center/cover;
-    min-height: 90vh; /* Altura mínima de la sección */
+    /* IMAGEN DE FONDO CORREGIDA AQUÍ */
+    background: url('https://i.imgur.com/c3Fcnzl.png') no-repeat center center/cover;
+    min-height: 90vh;
     position: relative;
     z-index: 1;
 }
@@ -89,46 +50,7 @@ h1, h2, h3, h4, h5, h6 {
 .hero-section::before {
     content: "";
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.4); /* Capa oscura para mejor contraste del texto */
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
     z-index: -1;
-}
-
-/* Feature Boxes */
-.feature-box {
-    background-color: #fff;
-    border: 1px solid #e0e0e0;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.feature-box:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-}
-
-.icon-large {
-    font-size: 3rem;
-}
-
-/* Footer */
-footer a {
-    text-decoration: none;
-}
-
-footer .bi {
-    font-size: 1.5rem;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .hero-section h1 {
-        font-size: 2.5rem;
-    }
-
-    .hero-section p.lead {
-        font-size: 1rem;
-    }
 }
