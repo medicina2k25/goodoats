@@ -9,6 +9,7 @@ body {
     font-family: 'Open Sans', sans-serif;
     color: #333;
     padding-top: 70px; /* Evita que el contenido se oculte detrás de la navbar fija */
+    background-color: #f5f0e1; /* <-- AÑADE ESTA LÍNEA */
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -79,7 +80,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Hero Section */
 .hero-section {
     /* IMAGEN DE FONDO ACTUALIZADA AQUÍ */
-    background: url('https://i.imgur.com/c3Fcnzl.png') no-repeat center center/cover;
+    background: url('https://i.imgur.com/1QAMxs2.png') repeat center center/cover;
     min-height: 90vh; /* Altura mínima de la sección */
     position: relative;
     z-index: 1;
