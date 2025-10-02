@@ -44,6 +44,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .navbar {
     border-bottom: 3px solid var(--color-amarillo);
+    background-color: #ffda4c;
 }
 
 .nav-link {
